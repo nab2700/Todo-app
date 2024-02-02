@@ -28,5 +28,5 @@ Route::get('delete/{todo}', [TodoController::class,'delete']);
 
 Route::post('store-data',[TodoController::class, 'store']);
 
-Route::get('test',[TodoController::class,'test']);
+Route::get('latest',[TodoController::class,'latest']);
 
