@@ -83,9 +83,14 @@ class TodoController extends Controller
       return redirect('/');
      }
 
-     //create
-     public function test(){
-      return 'okay';
+     //latest
+     public function latest(){
+
+      // Retrieve the first record from the database
+      $firstData = Todo::first();
+
+      // Pass the data to the view
+      return view('latest', ['firstData' => $firstData]);
    }
 
 }
